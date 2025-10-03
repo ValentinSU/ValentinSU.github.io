@@ -1,7 +1,14 @@
+/* Переменные */
+:root {
+  --color-green: #76bc21;
+  --background-black-opacity: rgb(0,0,0,00%); /* Затенениие */
+}
+
+
 /* Общие  стили */
 
 a {
-  color: #76bc21;
+  color: var(--color-green);
   text-decoration: none;
   transition: opacity .025s ease;
 }
@@ -13,19 +20,42 @@ a:hover {
 /* Header стили */
 
 .header {   
-    height: 100vh;
-    background: url("../images/fon.jpg") no-repeat center;
-    background-size: cover;
+    position: relative;
+    height: 110vh;
     clip-path: polygon(100% 0, 100% 86%, 54% 100%, 0 88%, 0 0);
+
+
 }
 
+.header__background {
+  position: absolute;
+  height: inherit;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(40%) grayscale(100%);  /* Фильтры размытия фона картинки */
+
+}
+
+.header__background-wrapper {  
+  position: absolute;
+  height: inherit;
+  width: 100%;
+
+  background:  rgb(0,0,0,5%);
+
+  z-index: 1;
+}                              /* Обёртка затения */
+
 .header-top {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   color: #fff;
   height: 80px;
-  background-color: rgb(0,0,0,50%);
+  background-color: var(--background-black-opacity);
+
+  z-index: 2;
 }
 
 .header-top  a { 
@@ -33,7 +63,7 @@ a:hover {
  }
 
 .header-top a.active {
-  color: #76bc21;
+  color: var(--color-green);
 }
 
 .logo {
@@ -56,4 +86,32 @@ a:hover {
 
 .menu-element:last-child {
   margin-right: 0;
+}
+
+.header-center {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 80px);  /* Расчет высоты */
+  
+  color: #fff;
+  z-index: 2;
+}
+
+.header-center__wrapper {
+  width: 100%;
+  padding: 20px 0;
+  background: var(--background-black-opacity); /* Затенениие */
+  text-align: center; /* Выравнивание по центру */
+}
+
+.name {
+  font-size: 58px; /* Размер заголовка */
+  line-height: 74px; /* Ширина окна */
+}
+
+.discription {
+  font-size: 22px;
 }
