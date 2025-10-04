@@ -30,6 +30,10 @@ a.link:hover {
   color: var(--color-text-black);
 }
 
+.block {
+  display: block;
+}
+
 
 
 /* Header стили */
@@ -229,6 +233,7 @@ a.link:hover {
 
 .about-me {
   display: flex;
+  align-items: center;
 }
 
 .about-me .left {
@@ -239,6 +244,7 @@ a.link:hover {
 
 .about-me .right {
   flex: 1 1 60%;
+  padding-left: 10px;
 }
 
 .about-me__image {
@@ -273,7 +279,6 @@ ul.about-me__extra {
 
 .about-me__extra-element:last-of-type {
   margin-bottom: 0;
-  flex-wrap: wrap;
 }
 
 .about-me__extra-icon {
@@ -288,9 +293,5 @@ ul.about-me__extra {
 }
 
 .about-me__extra-title {
-  margin-right: 10px;
-}
-
-.about-me__extra-discription{
-  margin-right: 10px;
+  margin-right: 5px;
 }
