@@ -7,20 +7,27 @@
 
 /* Общие  стили */
 
-a {
+a.link {
   color: var(--color-green);
   text-decoration: none;
   transition: opacity .025s ease;
 }
 
-a:hover {
+a.link:hover {
   opacity: 70%;
+}
+
+.block-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Header стили */
 
 .header {   
     position: relative;
+    bottom: 80px;
     height: 110vh;
     clip-path: polygon(100% 0, 100% 86%, 54% 100%, 0 88%, 0 0);
 
@@ -47,7 +54,8 @@ a:hover {
 }                              /* Обёртка затения */
 
 .header-top {
-  position: relative;
+  position: sticky;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -55,38 +63,115 @@ a:hover {
   height: 80px;
   background-color: var(--background-black-opacity);
 
-  z-index: 2;
+  z-index: 3;
 }
 
-.header-top  a { 
+.header-top  a.link { 
   color: #fff;
  }
 
-.header-top a.active {
-  color: var(--color-green);
-}
+
 
 .logo {
+  width: 260px;
   font-size: 35px;
   color: #fff;
 }
 
-.menu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  color: #fff;
-}
-
 .menu-element {
-  margin-right: 10px;
+  margin-right: 25px;   /* Отступы в меню */
   font-size: 22px;
 }
 
 .menu-element:last-child {
   margin-right: 0;
 }
+
+.menu-element a.link.active, .menu-element a.link:hover {
+  color: var(--color-green);
+}
+.menu-element__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-element__link.home svg{
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+
+}
+
+.switcher-container {
+  width: 260px;
+}
+
+.switcher {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 35px;
+  width: 90px; 
+  padding: 0 10px;
+
+  background: var(--color-green);
+  border-radius: 20px;  /* Овал */
+  opacity: 90%; 
+
+  transition: opacity .25s ease;
+  cursor: pointer;
+}
+
+.switcher:hover {
+  opacity: 1;
+}
+
+.switcher:before {
+  content: "";
+  width: 40px;
+  height: 30px;
+  background: #fff;
+  position: absolute;
+  left: 42px;
+  z-index: 1;
+  border-radius: 20px;
+
+  transition: left .025s ease-in-out;
+
+}
+
+#lang:checked + .switcher:before {
+  left: 7px;
+}
+
+#lang:checked + .switcher span:first-child {
+  color: var(--color-green);
+}
+
+#lang:checked + .switcher span:last-child {
+  color: #fff;
+}
+
+
+.switcher span {
+  flex: 1 1 50%;
+  text-align: center;
+  color: var(--color-green);
+
+  transition: color .025s ease-in-out;
+
+  z-index: 2;
+}
+
+.switcher span:first-child {
+  color: #fff;
+}
+
+#lang {
+  display: none;
+}
+
 
 .header-center {
   position: relative;
@@ -113,5 +198,20 @@ a:hover {
 }
 
 .discription {
+  display: inline-block;
+  width: 1200px;
+
   font-size: 22px;
+  line-height: 1.5em;
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  animation: print-text 3s steps(100); 
+}
+
+@keyframes print-text {
+  from {
+    width: 0;
+  }
 }
