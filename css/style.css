@@ -5,6 +5,7 @@
   --color-text-black: #262626;
   --color-grey:#9e9e9e;
   --background-black-opacity: rgb(0,0,0,20%); /* Затенениие */
+  --background-grey: #e1e1e1;
 }
 
 /* Общие  стили */
@@ -32,6 +33,34 @@ a.link:hover {
 
 .block {
   display: block;
+}
+
+.second-title {
+position: relative;
+font-size: 28px;
+text-align: center;
+margin-bottom: 40px;
+
+}
+
+.second-title::after {
+
+  --inderline-width: 60px;
+
+  content: "";
+  display: inline-block;
+  width: var(--inderline-width);
+  height: 2px;
+  
+  position: absolute;
+  bottom: -7px;
+  left: calc(50% - var(--inderline-width) /2);
+
+  background: var(--color-green);
+}
+
+.section-grey {
+  background-color: var(--background-grey)
 }
 
 
@@ -124,8 +153,8 @@ a.link:hover {
   position: relative;
   display: flex;
   align-items: center;
-  height: 35px;
-  width: 90px; 
+  height: 34px;
+  width: 92px; 
   padding: 0 10px;
 
   background: var(--color-green);
@@ -234,6 +263,7 @@ a.link:hover {
 .about-me {
   display: flex;
   align-items: center;
+  padding-bottom:  60px;
 }
 
 .about-me .left {
@@ -262,6 +292,7 @@ a.link:hover {
   font-size: 20px;
   color: var(--color-text);
   margin-bottom: 15px;
+  padding-right: 90px;
 }
 
 ul.about-me__extra {
@@ -295,3 +326,110 @@ ul.about-me__extra {
 .about-me__extra-title {
   margin-right: 5px;
 }
+
+/* Достижения */
+
+.achievements {
+  flex-direction: column;
+  position: relative;
+  padding: 40px 0;
+}
+
+.achievements::before, .achievements::after {
+  content: "";
+  position: absolute;
+  border: 80px solid transparent; /* Цвет родительского блока */
+
+}
+
+.achievements::before {
+  border-top: 30px solid  #fff;
+  top: 0;
+}
+
+.achievements::after {
+  border-top: 30px solid  var(--background-grey);
+  bottom: -110px;
+}
+
+.achievements-list {
+  display: flex;
+  max-width: 100%;
+}
+
+.achievements-list__view {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: space-between;
+  min-width: 100%;
+}
+
+.achievements-list__element{
+  flex: 1 1 33%;
+}
+
+.achivments-list__image {
+  width: 100%;
+  max-width: 250px;
+}
+
+/* Навыки*/
+
+.skills {
+  padding: 60px 0 40px;
+}
+
+
+/* Интересы */
+
+.interest {
+  padding: 40px 20px;
+}
+
+.interest__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-around;
+}
+
+.interest-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  width: 32%;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  padding: 20px 10px;
+
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.interest-image {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.interest-title {
+  margin-bottom: 15px;
+  font-size: 20px;
+
+  color: var(--color-text-black);
+}
+
+.interest-text {
+  color: var(--color-text);
+  margin-bottom: 10px;
+}
+
+.interest-text:last-of-type {
+  margin-bottom: 0;
+}
+
+
+
+
+
+
