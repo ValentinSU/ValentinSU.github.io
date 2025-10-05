@@ -59,8 +59,19 @@ margin-bottom: 40px;
   background: var(--color-green);
 }
 
+.section-discription {
+  margin-bottom: 40px;
+  font-size: 18px;
+  text-align: center;
+  color: var(--color-text-black);
+}
+
 .section-grey {
   background-color: var(--background-grey)
+}
+
+.active {
+  color: var(--color-green);
 }
 
 /* Слайдер изображения*/
@@ -77,6 +88,8 @@ margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
   min-width: 100%;
+
+  transition: all .5s ease;
 }
 
 .slider__link {
@@ -94,27 +107,50 @@ margin-bottom: 40px;
 
 .slider_controls {
   position: absolute;
-  bottom: 20px;
+  bottom: 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: 20px;
 }
 
 .slider_controls__element {
   display: inline-block;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: 1px solid #000;
+  width: 40px;
+  height: 8px;
+
+
+  border-radius: 8px;
+  background: rgb(0 0 0 /20%);
 
   cursor: pointer;
-  transition: opacity .025s ease;
+  transition: all .025s ease;
 }
 
 .slider_controls__element:hover {
-  opacity: .8;
+  background: var(--color-green);
 }
+
+.slider_input:first-of-type:checked  ~ .slider__wrapper:first-of-type {
+  margin-left: 0;
+}
+
+.slider_input:nth-of-type(2):checked  ~ .slider__wrapper:first-of-type {
+  margin-left: -100%;
+}
+
+.slider_input:nth-of-type(3):checked  ~ .slider__wrapper:first-of-type {
+  margin-left: -200%;
+}
+
+.slider_input:nth-of-type(4):checked  ~ .slider__wrapper:first-of-type {
+  margin-left: -300%;
+}
+
+.slider_input:nth-of-type(5):checked  ~ .slider__wrapper:first-of-type {
+  margin-left: -400%;
+}
+
 
 
 /* Header стили */
@@ -404,13 +440,101 @@ ul.about-me__extra {
   bottom: -110px;
 }
 
+.achievements-list__view:first-of-type {
+  animation: autoplay 10s infinite;
+}
 
+@keyframes autoplay {
+  0% {
+    margin-left: 0;   
+  }
 
+  20% {
+    margin-left: -100%;
+  }
+
+  40% {
+    margin-left: -100%;
+  }
+
+  60% {
+    margin-left: -200%;   
+  }
+
+  80% {
+    margin-left: -200%;
+  }
+
+  100% {
+    margin-left: 0%;
+  }
+
+}
 /* Навыки*/
 
 .skills {
   padding: 60px 0 40px;
 }
+
+.section-discription {
+  display: flex;
+  
+}
+
+ul.skill-filteres {
+  gap: 20px;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.skill-filter {
+  cursor: pointer;
+  transition: color .025s ease;
+}
+
+.skill-filter:hover {
+  color: var(--color-green);
+}
+
+.skills-wrapper {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.skills-wrapper .left {
+  flex: 1 1 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  padding-right: 20px;
+  gap: 20px;
+}
+
+.skills-list__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skills-list_elements {
+  flex: 1 1 27%;
+  max-width: 31%;
+  box-shadow: 0 0 10px rgb(0 0 0/ 0.3 );
+  border-radius: 3px;
+  height: 80px;
+  min-height: 80px;
+
+  padding: 10px;
+}
+
+.skills-wrapper .right {
+  flex: 1 1 30%;
+}
+
+
+
 
 
 /* Интересы */
@@ -462,7 +586,13 @@ ul.about-me__extra {
 }
 
 
+/* Книги */
 
+.books {
+  padding: 40px 0 80px;
+  flex-direction: column;
+  position: relative;
+}
 
 
 
