@@ -133,8 +133,11 @@
     <section class="achievements section-grey block-center" id="achievements">
         <h2 class="second-title">Достижения</h2>
 
-            <ul class="achievements-list slider">
-                <li class="achievements-list__view slider__wrapper">
+            <div class="achievements-list slider">
+                <input class="slider_input" type="radio" name="slider_achievements" id="slider_achievements-1">
+                <input class="slider_input" type="radio" name="slider_achievements" id="slider_achievements-2">
+                <input class="slider_input" type="radio" name="slider_achievements" id="slider_achievements-3">
+                <div  class="achievements-list__view slider__wrapper">
                     <a href="" class="achievements-list__element slider__link block-center">
                         <img class="achivments-list__image slider__image" src="achievements/achievements1.png" alt="Достижение №1">
                     </a>
@@ -144,8 +147,8 @@
                     <a href="" class="achievements-list__element slider__link block-center">
                         <img class="achivments-list__image slider__image" src="achievements/achievements3.png" alt="Достижение №3">
                     </a>
-                </li>    
-                <li class="achievements-list__view slider__wrapper">
+                </div>    
+                <div class="achievements-list__view slider__wrapper">
                     <a href="" class="achievements-list__element slider__link block-center">
                         <img class="achivments-list__image slider__image" src="achievements/achievements4.png" alt="Достижение №4">
                     </a>
@@ -155,8 +158,8 @@
                     <a href="" class="achievements-list__element slider__link block-center">
                         <img class="achivments-list__image slider__image" src="achievements/achievements6.png" alt="Достижение №5">
                     </a>
-                </li>
-                <li class="achievements-list__view slider__wrapper">
+                </div>
+                <div class="achievements-list__view slider__wrapper">
                     <a href="" class="achievements-list__element slider__link block-center">
                         <img class="achivments-list__image slider__image" src="achievements/achievements1.png" alt="Достижение №1-1">
                     </a>
@@ -166,8 +169,15 @@
                     <a href="" class="achievements-list__element slider__link block-center">
                         <img class="achivments-list__image slider__image" src="achievements/achievements3.png" alt="Достижение №3-3">
                     </a>
-                </li>
-            </ul>
+                </div>
+
+                <div class="slider_controls"> 
+                    <label for="slider_achievements-1" class="slider_controls__element"></label>
+                    <label for="slider_achievements-2" class="slider_controls__element"></label>
+                    <label for="slider_achievements-3" class="slider_controls__element"></label>
+
+                </div>
+            </div>
     </section>
 
 <!------------- Навыки------------->
@@ -322,13 +332,41 @@
 
         <p class="section-discription">Прочитанные книги профильной литературы</p>
 
-        <ul class="achievements-list">
-            <li class="books-list_element">Книга 1</li>
-            <li class="books-list_element">Книга 2</li>
-            <li class="books-list_element">Книга 3</li>
-            <li class="books-list_element">Книга 4</li>
-            <li class="books-list_element">Книга 5</li>
-        </ul>
+                <ul class="book-list slider">
+                <li class="slider__wrapper">
+                    <a href="" class="slider__link block-center">
+                        <img class="slider__image" src="achievements/achievements1.png" alt="">
+                    </a>
+                    <a href="" class="slider__link block-center">
+                        <img class="slider__image" src="achievements/achievements2.png" alt="">
+                    </a>
+                    <a href="" class="slider__link block-center">
+                        <img class="slider__image" src="achievements/achievements3.png" alt="">
+                    </a>
+                </li>    
+                <li class="achievements-list__view slider__wrapper">
+                    <a href="" class="slider__link block-center">
+                        <img class="slider__image" src="achievements/achievements4.png" alt="">
+                    </a>
+                    <a href="" class="slider__link block-center">
+                        <img class="slider__image" src="achievements/achievements5.png" alt="">
+                    </a>
+                    <a href="" class="slider__link block-center">
+                        <img class="slider__image" src="achievements/achievements6.png" alt="">
+                    </a>
+                </li>
+                <li class="achievements-list__view slider__wrapper">
+                    <a href="" class="slider__link block-center">
+                        <img class="slider__image" src="achievements/achievements1.png" alt="">
+                    </a>
+                    <a href="" class="slider__link block-center">
+                        <img class="slider__image" src="achievements/achievements2.png" alt="">
+                    </a>
+                    <a href="" class="slider__link block-center">
+                        <img class="slider__image" src="achievements/achievements3.png" alt="">
+                    </a>
+                </li>
+            </ul>
     </section>
 
 <!------------- Обратная связь ------------->

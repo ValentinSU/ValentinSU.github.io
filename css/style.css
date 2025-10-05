@@ -63,6 +63,58 @@ margin-bottom: 40px;
   background-color: var(--background-grey)
 }
 
+/* Слайдер изображения*/
+
+.slider {
+  position: relative;
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.slider__wrapper {
+  flex: 1 1 100%;
+  display: flex;
+  justify-content: space-between;
+  min-width: 100%;
+}
+
+.slider__link {
+  flex: 1 1 33%;
+}
+
+.slider__image {
+  width: 100%;
+  max-width: 250px;
+}
+
+.slider_input {
+  display: none;
+}
+
+.slider_controls {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.slider_controls__element {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #000;
+
+  cursor: pointer;
+  transition: opacity .025s ease;
+}
+
+.slider_controls__element:hover {
+  opacity: .8;
+}
 
 
 /* Header стили */
@@ -352,26 +404,7 @@ ul.about-me__extra {
   bottom: -110px;
 }
 
-.achievements-list {
-  display: flex;
-  max-width: 100%;
-}
 
-.achievements-list__view {
-  flex: 1 1 100%;
-  display: flex;
-  justify-content: space-between;
-  min-width: 100%;
-}
-
-.achievements-list__element{
-  flex: 1 1 33%;
-}
-
-.achivments-list__image {
-  width: 100%;
-  max-width: 250px;
-}
 
 /* Навыки*/
 
