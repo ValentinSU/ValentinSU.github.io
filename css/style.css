@@ -859,8 +859,12 @@ ul.skill-filteres {
     float: right;
 }
 
+.cls {
+  clear: both;
+}
+
 .textarea-wrapper {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .label {
