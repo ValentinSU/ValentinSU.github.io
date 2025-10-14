@@ -496,65 +496,35 @@ ul.about-me__extra {
 /* Навыки*/
 
 .skills {
-  padding: 60px 0 40px;
+  padding: 40px 0 40px;
 }
 
-.section-discription {
-  display: flex;
-  
-}
-
-ul.skill-filteres {
-  gap: 20px;
-  font-size: 18px;
-  margin-bottom: 40px;
-}
-
-.skill-filter {
-  cursor: pointer;
-  transition: color .025s ease;
-}
-
-.skill-filter:hover {
-  color: var(--color-green);
-}
-
-.skills-wrapper {
-  display: flex;
-  width: 80%;
-  margin: 0 auto;
-}
-
-.skills-wrapper .left {
-  flex: 1 1 70%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  flex-direction: column;
-
-  padding-right: 20px;
-  gap: 20px;
-}
 
 .skills-list__row {
   display: flex;
   justify-content: space-between;
+
+  padding: 10px
 }
 
 .skills-list_elements {
-  flex: 1 1 27%;
-  max-width: 31%;
-  box-shadow: 0 0 10px rgb(0 0 0/ 0.3 );
-  border-radius: 3px;
-  height: 80px;
-  min-height: 80px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 
-  padding: 10px;
+  width: 20%;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  padding: 20px 10px;
+
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
 }
 
-.skills-wrapper .right {
-  flex: 1 1 30%;
+.skills-image {
+  width: 150px;
+  margin-bottom: 20px;
 }
+
 
 /* Секция работа */
 .work {
